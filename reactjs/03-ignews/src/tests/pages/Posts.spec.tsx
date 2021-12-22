@@ -12,7 +12,7 @@ const posts = [
 jest.mock('../../services/prismic');
 
 describe('Posts page', () => {
-  it('rendes correctly', () => {
+  it('renders correctly', () => {
     render(<Posts posts={posts} />)
 
     expect(screen.getByText('My New Post')).toBeInTheDocument();
