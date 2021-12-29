@@ -10,6 +10,11 @@ import Config
 config :rockelivery,
   ecto_repos: [Rockelivery.Repo]
 
+# set the tables primary and foreign keys as uuid4 (binary_id is the uuid4)
+config :rockelivery, Rockelivery.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :rockelivery, RockeliveryWeb.Endpoint,
   url: [host: "localhost"],
